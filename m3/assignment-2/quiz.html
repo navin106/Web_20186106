@@ -1,9 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MyQUiz</title>
-</head>
-<body>
+	<title>MyQuiz</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<style style="background: solid blue;">
+	#top,
+	#bottom {
+		position: relative;
+		left: 0;
+		right: 0;
+		height: 90%;
+	}
 
+	#top {
+		top: 0;
+		/*background-color: blue;*/
+		background-color: black;
+	}
+
+	#bottom {
+		bottom: 0;
+		/*background-color: powderblue;*/
+		background-color: lightgrey;
+		/*width: 500px;*/
+		border: 15px solid red;
+		padding: 25px;
+		margin: 25px;
+
+	}
+</style>
+</head>
+<body style="background: red;">
+	<div>
+		<div id="top">
+			<h1 style="color: white"><b><i>Complete Quiz To Move Next Level</i></b></h1>
+		</div>
+		<div id="bottom">
+			<form>	
+				<p>Each computer has a built-in instruction set that it knows how to execute by design?</p>
+				<div class="alert alert-info">
+					<strong>Hint:</strong> Computer has a Processor.
+				</div>
+				<input type="radio" name="radiOpt" value="true" checked="true"> True<br>
+				<div class="alert alert-success">
+					<strong>Correct!</strong>
+				</div>
+				<input type="radio" name="radiOpt" value="false"> False<br>
+			</form>
+			<form>
+				<p>Hen has four legs?</p>
+				<div class="alert alert-info">
+					<strong>Hint:</strong> It is a bird..
+				</div>
+				<input type="radio" name="radiOpt" value="true" checked="true"> True<br>
+				<div class="alert alert-danger">
+					<strong>Wrong!</strong>
+				</div>
+				<input type="radio" name="radiOpt" value="false"> False<br>
+			</form>
+			<form>
+				<p>Cow is a domestic animal?</p>
+				<div class="alert alert-info">
+					<strong>Hint:</strong> Computer has a Processor.
+				</div>
+				<input type="radio" name="radiOpt" value="true" > True<br>
+				<input type="radio" name="radiOpt" value="false" checked="false"> False<br>
+				<div class="alert alert-danger">
+					<strong>Wrong!</strong>
+				</div>
+			</form>
+			<form>
+				<p>is laptop an electronic device?</p>
+				<input type="radio" name="radiOpt" value="true" checked="true"> True<br>
+				<div class="alert alert-success">
+					<strong>Correct!</strong>
+				</div>
+				<input type="radio" name="radiOpt" value="false"> False<br>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

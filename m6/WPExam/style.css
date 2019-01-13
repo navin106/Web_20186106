@@ -23,9 +23,13 @@ body {
 	margin: 0%;
 }
 #mySubs1{
-	height: 550px
+	/*height: 550px*/
 	/*width:0px;*/
-	margin: 0%;
+	/*margin: 0%;*/
+	/*background-color: lightblue;*/
+	/*width: 110px;*/
+	height: 110px;
+	overflow: scroll;
 	
 }
 #cspp{

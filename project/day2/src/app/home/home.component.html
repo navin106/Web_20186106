@@ -1,0 +1,12 @@
+<div class="row">
+    
+              <div *ngFor="let product of products">
+              <div class="col-xs-3">
+              <div class="well" style="box-shadow: 10px 10px grey; width: 230px" >
+                      <img src="{{product.volumeInfo.imageLinks.thumbnail}}">
+                      <input type="button" value="Click Me" style="float: right;">
+                     
+              </div>
+              </div>
+            </div>
+</div>

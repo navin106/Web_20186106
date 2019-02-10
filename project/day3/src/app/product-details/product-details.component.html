@@ -1,0 +1,62 @@
+<div class="container">
+    <div class ="row">
+        <div class = "col-md-4 well">
+            <div>
+                <img src="{{books.volumeInfo.imageLinks.thumbnail}}">
+            </div>
+            <div>
+                <button class="btn btn-lg btn-block btn-success text-uppercase" (click)="send()">Add to Cart</button>
+            </div>
+        </div>   
+        <div class = "col-md-8">
+            <div class="row ">
+                <div class="col-md-3 well" id="authors">
+                    Authors: {{books.volumeInfo.authors}}
+                </div>
+                <div class="col-md-9">
+                    <div  class="row ">
+                        <div class="col-md-12 well" id="title">
+                            Title:  {{books.volumeInfo.title}}
+                        </div>
+                    </div>
+                    <div  class="row">
+                        <div class="col-md-12 well" id="publishedDate">
+                            Published Date:  {{books.volumeInfo.publishedDate}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-12 well" id="description">
+                    Description: {{books.volumeInfo.description}}
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-12 well" id="amount"  *ngIf = "books.saleInfo.isEbook">
+                        <p>Rs. {{books.saleInfo.listPrice.amount}}</p> 
+                       </div>
+                       <div class="col-md-12 well" id="amount" *ngIf = "!books.saleInfo.isEbook">
+                          <h5 class="color1">Not in Stock</h5>
+                           </div>
+                      
+                </div>
+            </div>
+        </div>          
+    </div>
+    <!-- <div class = "row">
+        <div class="col-md-6">
+            <button type="button" class="btn btn-primary" id = 'previous' (click)="prevpressed()">Previous</button>
+        </div>
+        <div class="col-md-6" align="right">
+            <button type="button" class="btn btn-primary" id = 'next' (click)="nextpressed()">next</button>
+        </div>
+    </div>
+  </div>
+  <div class = "row">
+      <div class="col-md-6" align="center">
+          <button type="button" class="btn btn-primary" id = 'back' (click)="back()">Back</button>
+      </div>
+  </div>
+  <div (childEvent)="message=$event"></div> -->
+  
+  

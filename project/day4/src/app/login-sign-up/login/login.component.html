@@ -1,0 +1,17 @@
+<form id="#ngForm" submit="onclick()">
+  <div class="input">
+    <label>Username</label>
+    <input type="text" name="Username"   [(ngModel)]="unamecheck" required>
+  </div>
+  <div class="input">
+    <label>Password</label>
+    <input type="password" name="Password" [(ngModel)] = "password"  required>
+  </div>
+  <div class="input">
+    <button type="submit" (click)=onclick()>Login</button>
+  </div>
+</form>
+
+
+
+

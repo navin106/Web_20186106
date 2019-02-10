@@ -1,0 +1,66 @@
+
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Available</th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-right">Price</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let item of arr;index as i">
+                            <td><img src="{{item.volumeInfo.imageLinks.thumbnail}}"></td>
+                            <td>{{item.volumeInfo.title}}</td>
+                            <td>In stock</td>
+                            <td><button type="button" class="btn btn-default btn-sm" (click)="item.quantity = item.quantity - 1">
+                                <span class="glyphicon glyphicon-minus-sign">
+    
+                                </span></button>
+                                
+                                <input class="form-control" type="text" value="{{item.quantity}}" />
+                                <button type="button" class="btn btn-default btn-sm" (click)="item.quantity = item.quantity + 1">
+                                <span class="glyphicon glyphicon-plus-sign">
+                                  </span></button></td>
+                            <td class="text-right">{{item.saleInfo.retailPrice.amount * item.quantity}}</td>
+                            <td class="text-right"><button class="btn btn-sm btn-danger" (click) = "delete(i)"><i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td>Sub-Total</td>
+                            <td class="text-right">{{gettotal()}}</td>
+                        </tr>
+                        <tr>
+                            
+                            <td>Shipping</td>
+                            <td class="text-right"> {{shipping}}</td>
+                        </tr>
+                        <tr>
+                           
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong> {{gettotal()+shipping}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-block btn-light" (click)="continue()">Continue Shopping</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-success text-uppercase" (click)="onsubmit()">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

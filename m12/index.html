@@ -19,30 +19,36 @@
 	function check()
 	{
 
-		if (document.getElementById('psw').value=="navin") {
-			if (document.getElementById('YourName').value=="")
+		
+		if (document.getElementById('YourName').value=="")
+		{
+			alert ("Please Enter Your Name");
+			return false;
+		}
+		else{
+			if (document.getElementById('words').value=="")
 			{
-				alert ("Please Enter Your Name");
+				alert (" Enter Your comment");
 				return false;
 			}
-			else{
-				if (document.getElementById('words').value=="")
-				{
-					alert (" Enter Your comment");
-					return false;
+			else {
+				if (document.getElementById('psw').value!="navin") {
+					alert ("Wrong Password");
+					return false
+				}
+				else{
+					text = words.value;
+					text1 = YourName.value;
+					document.getElementById("para").innerHTML +='<p>'+'<b>' + text + '</b>'+'<sub>'+'&nbsp;&nbsp;&nbsp;&nbsp;'+text1+'</sub>'+'</p>';
+
 				}
 			}
 
-		} else{
-			alert ("Wrong Password");
-			return false
-		}
+		} 
 		return true;
 	}
 	function getwords() {
-		text = words.value;
-		text1 = YourName.value;
-		document.getElementById("para").innerHTML +='<p>'+'<b>' + text + '</b>'+'<sub>'+'&nbsp;&nbsp;&nbsp;&nbsp;'+text1+'</sub>'+'</p>';
+		
 		// var a = 0;
 		// var all = new Array();
 		// for(i=0;i<100;i++)
@@ -75,7 +81,7 @@
 
 			Password: <input id="psw" type="password" name="password"><br><br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="submit" value="Post Comment" onclick="getwords(); check(); ClearFields();">
+			<input type="submit" value="Post Comment" onclick="check(); ClearFields();">
 			<!-- </form> -->
 		</div>
 

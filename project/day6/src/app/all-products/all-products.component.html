@@ -1,0 +1,17 @@
+<div class="container">
+  <div *ngFor = "let product of products.items;index as i" class="col-xs-3">
+      <div class="row" >
+      <div >
+    <div class="well" style="box-shadow: 10px 10px grey; width: 230px">
+        <a routerLink = "/product-details/{{i}}"> <img src = {{product.volumeInfo.imageLinks.smallThumbnail}} rel="image" style="width:150px;height:120px;"/></a>
+        <h3> <a routerLink = "/product-details/{{i}}">{{product.volumeInfo.title}}</a></h3>
+     <div *ngIf = "product.saleInfo.isEbook">
+      <p>Rs. {{product.saleInfo.listPrice.amount}}</p> 
+     </div>
+     <div *ngIf = "!product.saleInfo.isEbook">
+        <h5 class="color1">Not in Stock</h5>
+         </div>
+        </div>
+      </div>
+ </div>
+ </div>       

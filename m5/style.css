@@ -1,0 +1,26 @@
+.panel {
+    border: solid rgb(4, 53, 82);
+    background-color: #e3f2fd;
+}
+
+.header {
+    background-color: #0063a4;
+    color: black;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+.spacer {
+    margin: 2%;
+}
+
+.reset {
+    text-align: end;
+}
+
+.question{
+    font-weight: bold
+}
+
